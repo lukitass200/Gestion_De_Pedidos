@@ -1,0 +1,13 @@
+.dashboard {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .dashboard h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+  

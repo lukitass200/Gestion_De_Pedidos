@@ -1,0 +1,10 @@
+.order-list {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .order-list-empty {
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+  

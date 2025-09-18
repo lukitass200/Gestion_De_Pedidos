@@ -1,0 +1,23 @@
+.order-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .order-filter label {
+    font-weight: 500;
+  }
+  
+  .order-filter select {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    color: var(--color-text);
+    cursor: pointer;
+  }
+  
+  .order-filter select:focus {
+    outline: 2px solid var(--color-primary);
+  }
+  

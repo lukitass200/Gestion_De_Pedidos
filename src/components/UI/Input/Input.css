@@ -1,0 +1,11 @@
+.ui-input {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .ui-input:focus {
+    outline: 2px solid var(--color-primary);
+  }
+  
