@@ -1,23 +1,53 @@
+/* OrderFilter.css */
 .order-filter {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .order-filter label {
-    font-weight: 500;
-  }
-  
-  .order-filter select {
-    padding: 0.3rem 0.6rem;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    background: white;
-    color: var(--color-text);
-    cursor: pointer;
-  }
-  
-  .order-filter select:focus {
-    outline: 2px solid var(--color-primary);
-  }
-  
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  font-size: 1vw;
+  color: #1f2937; /* gris oscuro */
+}
+
+.order-filter__label {
+  font-weight: 600;
+  font-size: 1vw;
+  color: #111827;
+  margin-right: 0.5vw;
+}
+
+/* Aplica ya sea si Select renderiza un <select> interno o si recibe className */
+.order-filter__select,
+.order-filter select {
+  min-width: 12vw;
+  padding: 0.6vw 1vw;
+  border: 0.12vw solid #cbd5e1;
+  border-radius: 0.6vw;
+  background-color: #ffffff;
+  color: #111827;
+  font-size: 1vw;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  -webkit-appearance: none; /* evitar estilos nativos en algunos navegadores */
+  appearance: none;
+}
+
+.order-filter__select:hover,
+.order-filter select:hover {
+  border-color: #94a3b8;
+}
+
+.order-filter__select:focus,
+.order-filter select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0.4vw rgba(37, 99, 235, 0.18);
+}
+
+/* Si Tailwind o reglas externas te pisan, usa selector más específico */
+.order-filter .order-filter__select,
+.order-filter > select.order-filter__select {
+  /* reglas iguales para forzar especificidad */
+}
+
+/* Utiliza !important solo como último recurso */
+.order-filter__select.force {
+  border: 0.12vw solid #2563eb !important;
+}

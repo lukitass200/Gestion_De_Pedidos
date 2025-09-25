@@ -1,10 +1,17 @@
+/* Contenedor de la lista de pedidos */
 .order-list {
-    display: grid;
-    gap: 1rem;
-  }
-  
-  .order-list-empty {
-    color: var(--color-text-secondary);
-    font-style: italic;
-  }
-  
+  display: grid;
+  gap: 1.2vw;
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+  padding: 1vw;
+  font-size: 1vw;
+  color: #1f2937; /* gris oscuro */
+}
+
+/* Mensaje cuando no hay pedidos */
+.order-list__empty {
+  font-size: 1vw;
+  color: #6b7280; /* gris medio */
+  text-align: center;
+  padding: 2vw;
+}

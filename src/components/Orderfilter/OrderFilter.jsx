@@ -1,13 +1,14 @@
 import Select from "../UI/Select/Select";
-import './OrderFilter.css'
+import './OrderFilter.css';
 
 const OrderFilter = ({ selectedStatus, onChange }) => {
   const statuses = ["all", "pending", "shipped", "delivered"];
 
   return (
-    <div className="flex items-center gap-2">
-      <label>Filtrar por estado:</label>
+    <div className="order-filter flex items-center gap-2">
+      <label className="order-filter__label">Filtrar por estado:</label>
       <Select
+        className="order-filter__select"
         value={selectedStatus}
         onChange={(e) => onChange(e.target.value)}
       >

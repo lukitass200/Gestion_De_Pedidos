@@ -1,5 +1,5 @@
 import Card from "../UI/Card/Card";
-import './OrderStats.css'
+import './OrderStats.css';
 
 const OrderStats = ({ orders }) => {
   const total = orders.length;
@@ -9,11 +9,13 @@ const OrderStats = ({ orders }) => {
 
   return (
     <Card>
-      <h3 className="font-bold">📊 Estadísticas</h3>
-      <p>Total pedidos: {total}</p>
-      <p>Pendientes: {pending}</p>
-      <p>Enviados: {shipped}</p>
-      <p>Entregados: {delivered}</p>
+      <div className="order-stats">
+        <h3>📊 Estadísticas</h3>
+        <p className="total">Total pedidos: {total}</p>
+        <p className="pending">Pendientes: {pending}</p>
+        <p className="shipped">Enviados: {shipped}</p>
+        <p className="delivered">Entregados: {delivered}</p>
+      </div>
     </Card>
   );
 };

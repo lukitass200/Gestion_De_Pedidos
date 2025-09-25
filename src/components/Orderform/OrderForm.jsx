@@ -46,43 +46,50 @@ const OrderForm = ({ onAddOrder }) => {
 
   return (
     <Card>
-      <h3 className="font-bold">➕ Nuevo Pedido</h3>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <Input
-          label="Cliente"
-          value={customer}
-          onChange={(e) => setCustomer(e.target.value)}
-        />
+  <div className="order-form">
+    <h3 className="font-bold">➕ Nuevo Pedido</h3>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <Input
+        label="Cliente"
+        value={customer}
+        onChange={(e) => setCustomer(e.target.value)}
+      />
 
-        <h4 className="font-medium">Productos</h4>
-        {products.map((p, i) => (
-          <div key={i} className="flex gap-2">
-            <Input
-              placeholder="Nombre"
-              value={p.name}
-              onChange={(e) => handleProductChange(i, "name", e.target.value)}
-            />
-            <Input
-              type="number"
-              placeholder="Cantidad"
-              value={p.quantity}
-              onChange={(e) => handleProductChange(i, "quantity", parseInt(e.target.value))}
-            />
-            <Input
-              type="number"
-              placeholder="Precio"
-              value={p.price}
-              onChange={(e) => handleProductChange(i, "price", parseFloat(e.target.value))}
-            />
-          </div>
-        ))}
-        <Button type="button" onClick={addProduct}>
-          ➕ Agregar producto
-        </Button>
+      <h4 className="font-medium">Productos</h4>
+      {products.map((p, i) => (
+        <div key={i} className="product-row">
+          <Input
+            placeholder="Nombre"
+            value={p.name}
+            onChange={(e) => handleProductChange(i, "name", e.target.value)}
+          />
+          <Input
+            type="number"
+            placeholder="Cantidad"
+            value={p.quantity}
+            onChange={(e) =>
+              handleProductChange(i, "quantity", parseInt(e.target.value))
+            }
+          />
+          <Input
+            type="number"
+            placeholder="Precio"
+            value={p.price}
+            onChange={(e) =>
+              handleProductChange(i, "price", parseFloat(e.target.value))
+            }
+          />
+        </div>
+      ))}
+      <Button type="button" onClick={addProduct}>
+        ➕ Agregar producto
+      </Button>
 
-        <Button type="submit">Guardar Pedido</Button>
-      </form>
-    </Card>
+      <Button type="submit">Guardar Pedido</Button>
+    </form>
+  </div>
+</Card>
+
   );
 };
 

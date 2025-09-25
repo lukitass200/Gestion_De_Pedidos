@@ -1,31 +1,57 @@
+/* Contenedor principal del item */
 .order-item {
-    border: 1px solid #e5e7eb;
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
-  .order-item h3 {
-    margin: 0 0 0.5rem 0;
-    font-weight: bold;
-  }
-  
-  .order-item p {
-    margin: 0.2rem 0;
-  }
-  
-  .order-item .status {
-    font-weight: bold;
-    color: var(--color-secondary);
-  }
-  
-  .order-item .error {
-    color: var(--color-error);
-  }
-  
-  .order-item ul {
-    margin-top: 0.5rem;
-    padding-left: 1.2rem;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+  font-size: 1vw;
+  color: #1f2937; /* gris oscuro */
+  padding: 1vw;
+}
+
+/* Título del pedido */
+.order-item h3 {
+  font-size: 1.2vw;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.4vw;
+}
+
+/* Subtítulo */
+.order-item h4 {
+  font-size: 1vw;
+  font-weight: 600;
+  margin-top: 0.8vw;
+  color: #374151;
+}
+
+/* Texto de cliente, fecha y estado */
+.order-item p {
+  margin: 0.2vw 0;
+  font-size: 1vw;
+  color: #374151;
+}
+
+/* Estado resaltado */
+.order-item p span {
+  font-weight: 600;
+  color: #2563eb; /* azul primario */
+}
+
+/* Lista de productos */
+.order-item ul {
+  list-style-type: disc;
+  padding-left: 1.5vw;
+  margin-top: 0.4vw;
+}
+
+.order-item li {
+  margin: 0.3vw 0;
+  font-size: 0.95vw;
+  color: #1f2937;
+}
+
+/* Errores */
+.order-item .error {
+  color: #dc2626; /* rojo */
+  font-weight: 600;
+}

@@ -1,17 +1,44 @@
+/* Contenedor principal de las estadísticas */
 .order-stats {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
-  .order-stats h3 {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .order-stats p {
-    margin: 0.2rem 0;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 0.6vw;
+  font-size: 1vw;
+  color: #1f2937; /* gris oscuro */
+  padding: 1vw;
+}
+
+/* Título */
+.order-stats h3 {
+  font-size: 1.2vw;
+  font-weight: 700;
+  margin-bottom: 0.8vw;
+  color: #111827;
+}
+
+/* Texto general */
+.order-stats p {
+  font-size: 1vw;
+  margin: 0.2vw 0;
+  font-weight: 500;
+}
+
+/* Colores para cada estado */
+.order-stats .total {
+  color: #111827;
+}
+
+.order-stats .pending {
+  color: #f59e0b; /* amarillo para pendientes */
+  font-weight: 600;
+}
+
+.order-stats .shipped {
+  color: #2563eb; /* azul para enviados */
+  font-weight: 600;
+}
+
+.order-stats .delivered {
+  color: #16a34a; /* verde para entregados */
+  font-weight: 600;
+}
